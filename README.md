@@ -1,13 +1,46 @@
-# JAM-X
-JAM-X is a powerful Bash-based Bluetooth pentesting tool designed for security researchers and ethical hackers to test the resilience of Bluetooth stacks. Developed by Kanak Das, it simplifies complex Bluetooth attacks into a user-friendly, automated terminal interface.
+The User Manual (MANUAL.md)
+This provides the technical instructions for users to follow.
 
-🛡️ JAM-X v0.4.0Advanced Bluetooth Pentesting & Signal Analysis UtilityDeveloped by: Kanak DasContact: kanakdas.india@gmail.comJAM-X is a powerful Bash-based tool designed for security professionals to audit Bluetooth device security. It provides a real-time monitor for discovering nearby devices and offers four specialized attack vectors to test stack resilience.🚀 Key FeaturesZero-Flicker Continuous Scan: Real-time updates with background processing.Signal Power Monitor: Displays estimated RSSI percentage for target tracking.Deep Hardware Inspection: Extracts manufacturer and LMP version details.Auto-Dependency Installer: One-click setup for all required Linux tools.Four Attack Modes: BlueSmack, Connection Flooding, SDP Fuzzing, and Force Disconnect.📥 InstallationBash# Clone the repository
-git clone https://github.com/YOUR_USERNAME/JAM-X.git
-cd JAM-X
+Markdown
 
-# Give execution permission
-chmod +x jamx.sh
+# 📖 JAM-X User Manual
 
-# Run with sudo
-sudo ./jamx.sh
-📋 Quick StartNavigate to Option 3 (Help) and select Option 1 to install all dependencies.Go to Option 2 to start the scanner.Wait for your target to appear and press Ctrl+C.Enter the ID and select your attack method.2. The User Manual (MANUAL.md)This document provides the technical details on how to use the tool correctly.📖 JAM-X User Manual🛠 PrerequisitesOS: Kali Linux, Parrot OS, or Ubuntu.Hardware: An external Bluetooth adapter (e.g., CSR 4.0 or Sena UD100) is highly recommended for hci1 stability.Permissions: Root/Sudo access is mandatory for raw socket manipulation.🎮 Menu Options Explained1. Know Your BluetoothDisplays local adapter details.Status: Must be ONLINE to perform attacks.MAC Address: Your local hardware ID (helps avoid self-targeting).2. Continuous ScanThis is the core of JAM-X. It uses hcitool and btmgmt in a background loop.Power (%): Indicates signal strength. 90%+ means the target is very close.Ctrl+C: This does not exit the script; it pauses the scan so you can select a target MAC.3. Attack Methods (The Tactical Suite)MethodTarget TypeTechnical ActionExpected ResultBlueSmackAudio/HIDL2CAP Buffer OverflowAudio stutter or mouse lag.Conn FloodSmartphonesAuthentication SpamsPairing pop-up loops and UI lag.SDP FuzzingIoT/Smart TVService Query LoopService becomes unavailable.Force DCEarphonesLink-Layer HijackingDisconnects earbuds from mobile.⚠️ TroubleshootingAdapter Not Found: If hci1 is missing, check hcitool dev. You can change the INTERFACE variable in the script header if your card is hci0.Scan is Blank: Ensure the target device is in Pairing Mode or Discoverable Mode.Attack not working: Ensure you are physically close to the target (within 5-10 meters).⚖️ Legal WarningJAM-X is intended for legal authorized pentesting only. Do not use this tool on devices you do not own or have written permission to test.
+## 🛠 System Requirements
+- **OS:** Kali Linux or any Debian-based distro.
+- **Hardware:** A Bluetooth adapter (Internal or USB Dongle).
+- **Dependencies:** `bluez`, `bluez-btit-tools`, `bluez-obsolete-tools`.
+
+
+
+## 🎮 How to Use JAM_X.sh
+
+### Step 1: Configuration
+Ensure your Bluetooth adapter is plugged in. The script defaults to `hci1`. If your adapter is `hci0`, open `JAM_X.sh` in a text editor and change the `INTERFACE` variable at the top.
+
+### Step 2: Dependency Check
+Before your first run, go to **Option 3 (Help & Auto-Install)** and select **Option 1**. This ensures all legacy Bluetooth tools are installed and ready.
+
+### Step 3: Target Discovery
+Select **Option 2 (Start Continuous Scan)**. 
+- The list will update every 5 seconds without clearing the screen.
+- When you see your target device, press **Ctrl+C**. This pauses the scan and opens the selection menu.
+
+### Step 4: Launching an Attack
+Select the **ID** number of your target. Choose the method that best fits the device type:
+- **For Earphones:** Use **Option D (Force Disconnect)**. This is designed to break the link between a mobile and a headset.
+- **For Phones:** Use **Option B**. It spams connection requests to freeze the user interface.
+
+
+
+## ⚠️ Safety & Legal
+Only use JAM-X on hardware you own. This tool is for educational and authorized testing purposes only.
+Final GitHub Checklist:
+JAM_X.sh: Your main script file.
+
+README.md: The project overview (copy from above).
+
+MANUAL.md: The detailed instructions (copy from above).
+
+LICENSE: Your MIT license file.
+
+Would you like me to help you format a LinkedIn post to announce the release of JAM-X to your professional network?
