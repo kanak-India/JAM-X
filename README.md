@@ -1,8 +1,3 @@
-The User Manual (MANUAL.md)
-This provides the technical instructions for users to follow.
-
-Markdown
-
 # 📖 JAM-X User Manual
 
 ## 🛠 System Requirements
@@ -34,13 +29,5 @@ Select the **ID** number of your target. Choose the method that best fits the de
 
 ## ⚠️ Safety & Legal
 Only use JAM-X on hardware you own. This tool is for educational and authorized testing purposes only.
-Final GitHub Checklist:
-JAM_X.sh: Your main script file.
-
-README.md: The project overview (copy from above).
-
-MANUAL.md: The detailed instructions (copy from above).
-
-LICENSE: Your MIT license file.
 
 Would you like me to help you format a LinkedIn post to announce the release of JAM-X to your professional network?
