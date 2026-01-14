@@ -25,6 +25,21 @@ Select the **ID** number of your target. Choose the method that best fits the de
 - **For Earphones:** Use **Option D (Force Disconnect)**. This is designed to break the link between a mobile and a headset.
 - **For Phones:** Use **Option B**. It spams connection requests to freeze the user interface.
 
+- Markdown
+
+# 🛡️ JAM-X v0.4.0
+### Advanced Bluetooth Pentesting & Signal Analysis Utility
+**Developed by:** [kanak-india](https://github.com/kanak-india)
+
+JAM-X is a powerful Bash-based security tool designed for auditing Bluetooth device resilience.
+
+## 📥 Quick Install
+```bash
+git clone [https://github.com/kanak-india/JAM-X.git](https://github.com/kanak-india/JAM-X.git)
+cd JAM-X
+chmod +x JAM_X.sh
+sudo ./JAM_X.sh
+
 
 
 ## ⚠️ Safety & Legal
